@@ -1,13 +1,13 @@
 import yagmail
 
-#yagmail.register('bolignotification', 'Karmagedonas1')
+#yagmail.register('username', 'password')
 
 def sendEmail(df):
     """Send email if there are new apartments added to the database"""
     if len(df) > 0:
         yag = yagmail.SMTP('bolignotification')
 
-        to = 'valdemaras.pet@gmail.com'
+        to = 'youremail@gmail.com'
         subject = 'New Apartment Alert'
         body = 'List of new apartments:'
         html = df.to_html().replace("\n", "")
